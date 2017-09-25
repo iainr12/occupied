@@ -8,13 +8,13 @@ import java.util.Date;
 public class State {
 
     private final String sensorId;
-    private final boolean occupied;
+    private final OccupiedState occupiedState;
     private final Date recordedAt;
     private final Source source;
 
-    private State(String sensorId, boolean occupied, Date recordedAt, Source source) {
+    private State(String sensorId, OccupiedState occupiedState, Date recordedAt, Source source) {
         this.sensorId = sensorId;
-        this.occupied = occupied;
+        this.occupiedState = occupiedState;
         this.recordedAt = recordedAt;
         this.source = source;
     }
@@ -23,8 +23,8 @@ public class State {
         return sensorId;
     }
 
-    public boolean isOccupied() {
-        return occupied;
+    public OccupiedState getOccupiedState() {
+        return occupiedState;
     }
 
     public Date getRecordedAt() {
@@ -40,18 +40,18 @@ public class State {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        State state1 = (State) o;
+        State state = (State) o;
 
-        if (occupied != state1.occupied) return false;
-        if (sensorId != null ? !sensorId.equals(state1.sensorId) : state1.sensorId != null) return false;
-        if (recordedAt != null ? !recordedAt.equals(state1.recordedAt) : state1.recordedAt != null) return false;
-        return source == state1.source;
+        if (sensorId != null ? !sensorId.equals(state.sensorId) : state.sensorId != null) return false;
+        if (occupiedState != state.occupiedState) return false;
+        if (recordedAt != null ? !recordedAt.equals(state.recordedAt) : state.recordedAt != null) return false;
+        return source == state.source;
     }
 
     @Override
     public int hashCode() {
         int result = sensorId != null ? sensorId.hashCode() : 0;
-        result = 31 * result + (occupied ? 1 : 0);
+        result = 31 * result + (occupiedState != null ? occupiedState.hashCode() : 0);
         result = 31 * result + (recordedAt != null ? recordedAt.hashCode() : 0);
         result = 31 * result + (source != null ? source.hashCode() : 0);
         return result;
@@ -61,9 +61,41 @@ public class State {
     public String toString() {
         return "State{" +
                 "sensorId='" + sensorId + '\'' +
-                ", occupied=" + occupied +
+                ", occupiedState=" + occupiedState +
                 ", recordedAt=" + recordedAt +
                 ", source=" + source +
                 '}';
+    }
+
+    public static class Builder {
+
+        private String sensorId;
+        private OccupiedState occupiedState;
+        private Date recordedAt;
+        private Source source;
+
+        public Builder withSensorId(String sensorId) {
+            this.sensorId = sensorId;
+            return this;
+        }
+
+        public Builder withOccupiedState(OccupiedState occupiedState) {
+            this.occupiedState = occupiedState;
+            return this;
+        }
+
+        public Builder withRecordedAt(Date recordedAt) {
+            this.recordedAt = recordedAt;
+            return this;
+        }
+
+        public Builder withSource(Source source) {
+            this.source = source;
+            return this;
+        }
+
+        public State build() {
+            return new State(sensorId, occupiedState, recordedAt, source);
+        }
     }
 }

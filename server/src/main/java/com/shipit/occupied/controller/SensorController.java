@@ -1,11 +1,11 @@
 package com.shipit.occupied.controller;
 
-import com.shipit.occupied.model.StateChangeRequest;
-import com.shipit.occupied.model.StateChangeResponse;
+import com.shipit.occupied.model.StateRequest;
+import com.shipit.occupied.model.StateResponse;
 
 public interface SensorController {
 
-    void heartbeat(String sensorId);
+    StateResponse heartbeat(String sensorId, StateRequest stateRequest);
 
-    StateChangeResponse stateChange(String sensorId, StateChangeRequest stateChangeRequest);
+    StateResponse stateChange(String sensorId, StateRequest stateRequest);
 }
