@@ -17,6 +17,16 @@ public class SensorControllerImpl implements SensorController {
     private SensorService sensorService;
 
     @Override
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public StateResponse getCurrentState(@PathVariable("id") String sensorId) {
+        OccupiedState response = sensorService.getCurrentState(sensorId);
+
+        return new StateResponse.Builder()
+                .withOccupiedState(response)
+                .build();
+    }
+
+    @Override
     @RequestMapping(value = "/{id}/heartbeat", method = RequestMethod.POST)
     public StateResponse heartbeat(@PathVariable("id") String sensorId, @RequestBody StateRequest request) {
         OccupiedState currentState = request.getOccupiedState();

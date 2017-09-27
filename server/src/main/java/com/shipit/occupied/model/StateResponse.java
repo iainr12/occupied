@@ -8,6 +8,10 @@ public class StateResponse {
         this.occupiedState = occupiedState;
     }
 
+    public OccupiedState getOccupiedState() {
+        return occupiedState;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

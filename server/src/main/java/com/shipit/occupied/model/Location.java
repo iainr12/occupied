@@ -16,16 +16,16 @@ public class Location {
     private final LocationType type;
     private final Gender gender;
     private final String displayName;
+    private final List<String> sensors;
 
-    private List<Sensor> sensors;
-
-    private Location(String id, String floor, String zone, LocationType type, Gender gender, String displayName) {
+    private Location(String id, String floor, String zone, LocationType type, Gender gender, String displayName, List<String> sensors) {
         this.id = id;
         this.floor = floor;
         this.zone = zone;
         this.type = type;
         this.gender = gender;
         this.displayName = displayName;
+        this.sensors = sensors;
     }
 
     public String getId() {
@@ -52,12 +52,8 @@ public class Location {
         return displayName;
     }
 
-    public List<Sensor> getSensors() {
+    public List<String> getSensors() {
         return sensors;
-    }
-
-    public void setSensors(List<Sensor> sensors) {
-        this.sensors = sensors;
     }
 
     @Override
@@ -109,6 +105,7 @@ public class Location {
         private LocationType type;
         private Gender gender;
         private String displayName;
+        private List<String> sensors;
 
         public Builder withId(String id) {
             this.id = id;
@@ -140,8 +137,13 @@ public class Location {
             return this;
         }
 
+        public Builder withSensors(List<String> sensors) {
+            this.sensors = sensors;
+            return this;
+        }
+
         public Location build() {
-            return new Location(id, floor, zone, type, gender, displayName);
+            return new Location(id, floor, zone, type, gender, displayName, sensors);
         }
     }
 }
