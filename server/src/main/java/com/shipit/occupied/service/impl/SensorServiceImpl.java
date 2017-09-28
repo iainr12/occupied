@@ -7,6 +7,8 @@ import com.shipit.occupied.model.Sensor;
 import com.shipit.occupied.model.Source;
 import com.shipit.occupied.model.State;
 import com.shipit.occupied.service.SensorService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class SensorServiceImpl implements SensorService {
+
+    private static final Logger logger = LoggerFactory.getLogger(SensorServiceImpl.class);
 
     @Autowired
     private SensorDAO sensorDAO;
@@ -47,7 +51,9 @@ public class SensorServiceImpl implements SensorService {
 
     @Override
     public OccupiedState getCurrentState(String sensorId) {
-        return sensorStates.get(sensorId);
+        logger.info(sensorStates.toString());
+        OccupiedState result = sensorStates.get(sensorId);
+        return result;
     }
 
     private void saveState(String sensorId, OccupiedState newState, Source source) {
@@ -64,6 +70,7 @@ public class SensorServiceImpl implements SensorService {
                 .withRecordedAt(new Date())
                 .withSource(source)
                 .build();
+        logger.info("About to persist state {}", state);
         stateDAO.persistState(state);
     }
 }

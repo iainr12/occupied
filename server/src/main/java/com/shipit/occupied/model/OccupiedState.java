@@ -1,5 +1,11 @@
 package com.shipit.occupied.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public enum OccupiedState {
-    OPEN, CLOSED;
+    @JsonProperty("open")
+    OPEN,
+
+    @JsonProperty("closed")
+    CLOSED;
 }

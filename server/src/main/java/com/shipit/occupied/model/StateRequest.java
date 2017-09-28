@@ -1,9 +1,13 @@
 package com.shipit.occupied.model;
 
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class StateRequest {
 
     private final OccupiedState occupiedState;
 
+    @JsonCreator
     private StateRequest(OccupiedState occupiedState) {
         this.occupiedState = occupiedState;
     }
