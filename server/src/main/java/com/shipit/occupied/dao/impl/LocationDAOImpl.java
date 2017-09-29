@@ -29,7 +29,7 @@ public class LocationDAOImpl implements LocationDAO {
         Query query = new Query()
                 .with(new Sort(sortOrders));
 
-        return mongoTemplate.findAll(Location.class);
+        return mongoTemplate.find(query, Location.class);
     }
 
     @Override
