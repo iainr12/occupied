@@ -1,6 +1,9 @@
 package com.shipit.occupied.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -17,6 +20,10 @@ public class Location {
     private final Gender gender;
     private final String displayName;
     private final List<String> sensors;
+
+    @JsonProperty("sensors")
+    @Transient
+    private List<Sensor> sensorData;
 
     private Location(String id, String floor, String zone, LocationType type, Gender gender, String displayName, List<String> sensors) {
         this.id = id;
@@ -52,8 +59,17 @@ public class Location {
         return displayName;
     }
 
-    public List<String> getSensors() {
+    public List<String> getSensorIds() {
         return sensors;
+    }
+
+    @JsonIgnore
+    public List<Sensor> getSensors() {
+        return sensorData;
+    }
+
+    public void setSensorData(List<Sensor> sensorData) {
+        this.sensorData = sensorData;
     }
 
     @Override

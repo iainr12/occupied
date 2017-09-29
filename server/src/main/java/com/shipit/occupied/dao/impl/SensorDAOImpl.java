@@ -19,6 +19,12 @@ public class SensorDAOImpl implements SensorDAO {
     private MongoTemplate mongoTemplate;
 
     @Override
+    public Sensor getSensor(String sensorId) {
+        Query query = Query.query(new Criteria("id").is(sensorId));
+        return mongoTemplate.findOne(query, Sensor.class);
+    }
+
+    @Override
     public List<Sensor> getAllSensors() {
         return mongoTemplate.findAll(Sensor.class);
     }

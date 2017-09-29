@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface SensorDAO {
 
+    Sensor getSensor(String sensorId);
+
     List<Sensor> getAllSensors();
 
     void updateState(String sensorId, OccupiedState newState);

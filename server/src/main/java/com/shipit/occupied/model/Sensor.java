@@ -94,6 +94,14 @@ public class Sensor {
             return this;
         }
 
+        public Builder withSensor(Sensor sensor) {
+            this.id = sensor.getId();
+            this.position = sensor.getPosition();
+            this.occupiedState = sensor.getOccupiedState();
+            this.displayName = sensor.getDisplayName();
+            return this;
+        }
+
         public Sensor build() {
             return new Sensor(id, position, occupiedState, displayName);
         }

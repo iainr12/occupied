@@ -1,7 +1,10 @@
 package com.shipit.occupied.service;
 
 import com.shipit.occupied.model.OccupiedState;
+import com.shipit.occupied.model.Sensor;
 import com.shipit.occupied.model.Source;
+
+import java.util.List;
 
 public interface SensorService {
 
@@ -9,4 +12,7 @@ public interface SensorService {
 
     OccupiedState getCurrentState(String sensorId);
 
+    List<Sensor> getAllSensors();
+
+    Sensor getSensor(String sensorId);
 }
