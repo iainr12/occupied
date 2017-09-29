@@ -3,6 +3,8 @@ package com.shipit.occupied.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Comparator;
+
 @Document(collection = "sensors")
 public class Sensor {
 
@@ -106,4 +108,11 @@ public class Sensor {
             return new Sensor(id, position, occupiedState, displayName);
         }
     }
+
+    public static Comparator<Sensor> COMPARE_BY_POSITION = new Comparator<Sensor>() {
+        @Override
+        public int compare(Sensor o1, Sensor o2) {
+            return o1.getPosition().compareTo(o2.getPosition());
+        }
+    };
 }

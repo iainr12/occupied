@@ -15,4 +15,6 @@ public interface SensorService {
     List<Sensor> getAllSensors();
 
     Sensor getSensor(String sensorId);
+
+    void resetAll();
 }

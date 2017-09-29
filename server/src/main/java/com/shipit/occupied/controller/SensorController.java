@@ -10,4 +10,6 @@ public interface SensorController {
     StateResponse heartbeat(String sensorId, StateRequest stateRequest);
 
     StateResponse stateChange(String sensorId, StateRequest stateRequest);
+
+    void resetAll();
 }

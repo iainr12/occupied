@@ -57,4 +57,11 @@ public class SensorControllerImpl implements SensorController {
                 .withOccupiedState(response)
                 .build();
     }
+
+    @Override
+    @RequestMapping(value = "/reset", method = RequestMethod.GET)
+    public void resetAll() {
+        sensorService.resetAll();
+    }
+
 }

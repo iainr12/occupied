@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -37,6 +38,7 @@ public class LocationServiceImpl implements LocationService {
                     sensorsForLocation.add(sensor);
                 }
             }
+            sensorsForLocation.sort(Sensor.COMPARE_BY_POSITION);
             location.setSensorData(sensorsForLocation);
         }
 

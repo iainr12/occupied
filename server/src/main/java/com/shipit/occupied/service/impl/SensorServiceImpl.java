@@ -95,4 +95,12 @@ public class SensorServiceImpl implements SensorService {
         logger.info("About to persist state {}", state);
         stateDAO.persistState(state);
     }
+
+    @Override
+    public void resetAll() {
+        for (String sensorId : sensorCache.keySet()) {
+            OccupiedState occupiedState = processState(sensorId, OccupiedState.OPEN, Source.STATE_CHANGE);
+            logger.info("Reset state for " + sensorId);
+        }
+    }
 }
