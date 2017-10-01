@@ -1,0 +1,926 @@
+[
+    {
+        "id": "L00-EAST-MALE",
+        "floor": "0",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L0 East, Male Toilets",
+        "sensorIds": [
+            "L00-EAST-MALE-1",
+            "L00-EAST-MALE-2",
+            "L00-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L00-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L0 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L00-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L0 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L00-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L0 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L00-EAST-FEMALE",
+        "floor": "0",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L0 East, Female Toilets",
+        "sensorIds": [
+            "L00-EAST-FEMALE-1",
+            "L00-EAST-FEMALE-2",
+            "L00-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L00-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L0 East, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L00-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L0 East, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L00-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L0 East, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L00-WEST-MALE",
+        "floor": "0",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L0 West, Male Toilets",
+        "sensorIds": [
+            "L00-WEST-MALE-1",
+            "L00-WEST-MALE-2",
+            "L00-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L00-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L0 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L00-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L0 West, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L00-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L0 West, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L00-WEST-FEMALE",
+        "floor": "0",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L0 West, Female Toilets",
+        "sensorIds": [
+            "L00-WEST-FEMALE-1",
+            "L00-WEST-FEMALE-2",
+            "L00-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L00-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L0 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L00-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L0 West, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L00-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L0 West, Female Toilets, Stall 3"
+            }
+        ]
+    },
+    {
+        "id": "L01-EAST-MALE",
+        "floor": "1",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L1 East, Male Toilets",
+        "sensorIds": [
+            "L01-EAST-MALE-1",
+            "L01-EAST-MALE-2",
+            "L01-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L01-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L1 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L01-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L1 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L01-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L1 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L01-EAST-FEMALE",
+        "floor": "1",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L1 East, Female Toilets",
+        "sensorIds": [
+            "L01-EAST-FEMALE-1",
+            "L01-EAST-FEMALE-2",
+            "L01-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L01-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L1 East, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L01-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L1 East, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L01-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L1 East, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L01-WEST-MALE",
+        "floor": "1",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L1 West, Male Toilets",
+        "sensorIds": [
+            "L01-WEST-MALE-1",
+            "L01-WEST-MALE-2",
+            "L01-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L01-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L1 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L01-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L1 West, Male Toilets, Stall 2"
+            },
+            {
+                "id": "L01-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L1 West, Male Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L01-WEST-FEMALE",
+        "floor": "1",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L1 West, Female Toilets",
+        "sensorIds": [
+            "L01-WEST-FEMALE-1",
+            "L01-WEST-FEMALE-2",
+            "L01-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L01-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L1 West, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L01-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L1 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L01-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L1 West, Female Toilets, Stall 3"
+            }
+        ]
+    },
+    {
+        "id": "L02-EAST-MALE",
+        "floor": "2",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L2 East, Male Toilets",
+        "sensorIds": [
+            "L02-EAST-MALE-1",
+            "L02-EAST-MALE-2",
+            "L02-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L02-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L2 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L02-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L2 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L02-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L2 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L02-EAST-FEMALE",
+        "floor": "2",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L2 East, Female Toilets",
+        "sensorIds": [
+            "L02-EAST-FEMALE-1",
+            "L02-EAST-FEMALE-2",
+            "L02-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L02-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L2 East, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L02-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L2 East, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L02-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L2 East, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L02-WEST-MALE",
+        "floor": "2",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L2 West, Male Toilets",
+        "sensorIds": [
+            "L02-WEST-MALE-1",
+            "L02-WEST-MALE-2",
+            "L02-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L02-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L2 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L02-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L2 West, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L02-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L2 West, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L02-WEST-FEMALE",
+        "floor": "2",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L2 West, Female Toilets",
+        "sensorIds": [
+            "L02-WEST-FEMALE-1",
+            "L02-WEST-FEMALE-2",
+            "L02-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L02-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L2 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L02-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L2 West, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L02-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L2 West, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L03-EAST-MALE",
+        "floor": "3",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L3 East, Male Toilets",
+        "sensorIds": [
+            "L03-EAST-MALE-1",
+            "L03-EAST-MALE-2",
+            "L03-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L03-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L3 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L03-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L3 East, Male Toilets, Stall 2"
+            },
+            {
+                "id": "L03-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L3 East, Male Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L03-EAST-FEMALE",
+        "floor": "3",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L3 East, Female Toilets",
+        "sensorIds": [
+            "L03-EAST-FEMALE-1",
+            "L03-EAST-FEMALE-2",
+            "L03-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L03-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L3 East, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L03-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L3 East, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L03-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L3 East, Female Toilets, Stall 3"
+            }
+        ]
+    },
+    {
+        "id": "L03-WEST-MALE",
+        "floor": "3",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L3 West, Male Toilets",
+        "sensorIds": [
+            "L03-WEST-MALE-1",
+            "L03-WEST-MALE-2",
+            "L03-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L03-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L3 West, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L03-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L3 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L03-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L3 West, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L03-WEST-FEMALE",
+        "floor": "3",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L3 West, Female Toilets",
+        "sensorIds": [
+            "L03-WEST-FEMALE-1",
+            "L03-WEST-FEMALE-2",
+            "L03-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L03-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L3 West, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L03-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L3 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L03-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L3 West, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L04-EAST-MALE",
+        "floor": "4",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L4 East, Male Toilets",
+        "sensorIds": [
+            "L04-EAST-MALE-1",
+            "L04-EAST-MALE-2",
+            "L04-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L04-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L4 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L04-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L4 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L04-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L4 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L04-EAST-FEMALE",
+        "floor": "4",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L4 East, Female Toilets",
+        "sensorIds": [
+            "L04-EAST-FEMALE-1",
+            "L04-EAST-FEMALE-2",
+            "L04-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L04-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L4 East, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L04-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L4 East, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L04-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L4 East, Female Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L04-WEST-MALE",
+        "floor": "4",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L4 West, Male Toilets",
+        "sensorIds": [
+            "L04-WEST-MALE-1",
+            "L04-WEST-MALE-2",
+            "L04-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L04-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L4 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L04-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L4 West, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L04-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L4 West, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L04-WEST-FEMALE",
+        "floor": "4",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L4 West, Female Toilets",
+        "sensorIds": [
+            "L04-WEST-FEMALE-1",
+            "L04-WEST-FEMALE-2",
+            "L04-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L04-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L4 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L04-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L4 West, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L04-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L4 West, Female Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L05-EAST-MALE",
+        "floor": "5",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L5 East, Male Toilets",
+        "sensorIds": [
+            "L05-EAST-MALE-1",
+            "L05-EAST-MALE-2",
+            "L05-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L05-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L5 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L05-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L5 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L05-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L5 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L05-EAST-FEMALE",
+        "floor": "5",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L5 East, Female Toilets",
+        "sensorIds": [
+            "L05-EAST-FEMALE-1",
+            "L05-EAST-FEMALE-2",
+            "L05-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L05-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L5 East, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L05-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L5 East, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L05-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L5 East, Female Toilets, Stall 3"
+            }
+        ]
+    },
+    {
+        "id": "L05-WEST-MALE",
+        "floor": "5",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L5 West, Male Toilets",
+        "sensorIds": [
+            "L05-WEST-MALE-1",
+            "L05-WEST-MALE-2",
+            "L05-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L05-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L5 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L05-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L5 West, Male Toilets, Stall 2"
+            },
+            {
+                "id": "L05-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L5 West, Male Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L05-WEST-FEMALE",
+        "floor": "5",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L5 West, Female Toilets",
+        "sensorIds": [
+            "L05-WEST-FEMALE-1",
+            "L05-WEST-FEMALE-2",
+            "L05-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L05-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L5 West, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L05-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L5 West, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L05-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L5 West, Female Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L06-EAST-MALE",
+        "floor": "6",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L6 East, Male Toilets",
+        "sensorIds": [
+            "L06-EAST-MALE-1",
+            "L06-EAST-MALE-2",
+            "L06-EAST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L06-EAST-MALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L6 East, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L06-EAST-MALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L6 East, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L06-EAST-MALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L6 East, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L06-EAST-FEMALE",
+        "floor": "6",
+        "zone": "EAST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L6 East, Female Toilets",
+        "sensorIds": [
+            "L06-EAST-FEMALE-1",
+            "L06-EAST-FEMALE-2",
+            "L06-EAST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L06-EAST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "open",
+                "displayName": "L6 East, Female Toilets, Stall 3"
+            },
+            {
+                "id": "L06-EAST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L6 East, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L06-EAST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "open",
+                "displayName": "L6 East, Female Toilets, Stall 1"
+            }
+        ]
+    },
+    {
+        "id": "L06-WEST-MALE",
+        "floor": "6",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "MALE",
+        "displayName": "L6 West, Male Toilets",
+        "sensorIds": [
+            "L06-WEST-MALE-1",
+            "L06-WEST-MALE-2",
+            "L06-WEST-MALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L06-WEST-MALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L6 West, Male Toilets, Stall 3"
+            },
+            {
+                "id": "L06-WEST-MALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L6 West, Male Toilets, Stall 1"
+            },
+            {
+                "id": "L06-WEST-MALE-2",
+                "position": "2",
+                "occupiedState": "closed",
+                "displayName": "L6 West, Male Toilets, Stall 2"
+            }
+        ]
+    },
+    {
+        "id": "L06-WEST-FEMALE",
+        "floor": "6",
+        "zone": "WEST",
+        "type": "TOILET",
+        "gender": "FEMALE",
+        "displayName": "L6 West, Female Toilets",
+        "sensorIds": [
+            "L06-WEST-FEMALE-1",
+            "L06-WEST-FEMALE-2",
+            "L06-WEST-FEMALE-3"
+        ],
+        "sensors": [
+            {
+                "id": "L06-WEST-FEMALE-1",
+                "position": "1",
+                "occupiedState": "closed",
+                "displayName": "L6 West, Female Toilets, Stall 1"
+            },
+            {
+                "id": "L06-WEST-FEMALE-2",
+                "position": "2",
+                "occupiedState": "open",
+                "displayName": "L6 West, Female Toilets, Stall 2"
+            },
+            {
+                "id": "L06-WEST-FEMALE-3",
+                "position": "3",
+                "occupiedState": "closed",
+                "displayName": "L6 West, Female Toilets, Stall 3"
+            }
+        ]
+    }
+]
