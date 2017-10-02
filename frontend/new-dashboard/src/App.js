@@ -11,16 +11,17 @@ import {
   TableRow,
   TableRowColumn,
 } from 'material-ui/Table';
-import ActionFavorite from 'material-ui/svg-icons/action/favorite';
-import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import Checkbox from 'material-ui/Checkbox';
+import Lock from 'material-ui/svg-icons/action/lock';
+import LockOpen from 'material-ui/svg-icons/action/lock-open';
+import {cyan500, pink500, grey500} from 'material-ui/styles/colors';
 
 class Dashboard extends Component {
 
   constructor() {
     super();
 
-    const tableHeaders = ['Floor', 'MALE East', 'FEMALE East', 'FEMALE West', 'MALE West'];
+    const tableHeaders = ['MALE East', 'FEMALE East','Accessible', 'FEMALE West', 'MALE West'];
 
     this.state = {
       data: myData,
@@ -28,12 +29,11 @@ class Dashboard extends Component {
       requiredData: []
     }
 
-    this.processData();
-    
+    this.getData = this.getData.bind(this);
   }
 
   processData() {
-    const data = myData;
+    const data = this.state.data;
     const requiredData = [];
     for(let i=0;i<=6;i++){
       requiredData[i] = {
@@ -41,7 +41,6 @@ class Dashboard extends Component {
       };
       for(let x=0;x<data.length;x++){
         let currentItem = data[x];
-        // console.log(currentItem);
         if(currentItem.floor === i.toString()){
           if(currentItem.zone === 'EAST' && currentItem.gender === 'MALE'){
             requiredData[i].eastMale = currentItem.sensors;
@@ -58,127 +57,136 @@ class Dashboard extends Component {
         }
       }
     }
-    this.state.requiredData = requiredData;
+    this.setState({requiredData: requiredData});
   }
 
   getData() {
-    // axios
-    //   .get('http://codepen.io/jobs.json')
-    //   .then(result => {
-    //       console.log(result);
-    //       this.setState({data: myData});
-    //       // this.setState({data: result.data});
-    //   })
-    //   .then(() => {
-    //       console.log(this.state.data);
-    //   })
-    console.log(myData);
-    this.setState({data: myData});
+    return axios
+      .get('http://172.20.10.3:8080/location')
+      .then((result) => {
+        // console.log(result.data);
+        this.setState({data: result.data});
+      })
+      .then(() => {
+        this.processData();
+      });
+  }
+
+  componentDidMount() {
+    this.getData();
+    this.dataInterval = setInterval(this.getData, 250);
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.getData.bind(this)}>
-          Get data
-        </button>
-
         <Table>
-          <TableHeader>
+          <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
             <TableRow>
+            <TableHeaderColumn style={{'text-align':'center', 'width':'20px'}} key={'floor'}>Floor</TableHeaderColumn>)}
               {this.state.tableHeaders.map(item => 
-              <TableHeaderColumn key={item}>{item}</TableHeaderColumn>)}
+              <TableHeaderColumn style={{'text-align':'center'}} key={item}>{item}</TableHeaderColumn>)}
             </TableRow>
           </TableHeader>
-          <TableBody>
+          <TableBody displayRowCheckbox={false}>
             {this.state.requiredData.map(item =>
               <TableRow key={'tableRow-'+item.floor}>
-                <TableRowColumn key={item.floor + item.floor}>{item.floor}</TableRowColumn>
-                <TableRowColumn key={item.floor + '-eastMale'}>
+                <TableRowColumn style={{'text-align':'center', 'width':'20px'}} key={item.floor + item.floor}>{item.floor}</TableRowColumn>
+                <TableRowColumn style={{'text-align':'center'}} key={item.floor + '-eastMale'}>
                 <div style={{ display: 'inline-flex'}}>
                   <Checkbox style={{width: '20px'}}
-                      checkedIcon={<ActionFavorite />}
-                      uncheckedIcon={<ActionFavoriteBorder/>}
-                      checked={item.eastMale[0].occupiedState==='open'}
-                      disabled={true}
+                      checkedIcon={<Lock />}
+                      uncheckedIcon={<LockOpen/>}
+                      checked={item.eastMale[0].occupiedState==='closed'}
+                      iconStyle={{fill: cyan500}}
                   />
                   <Checkbox style={{width: '20px'}}
-                      checkedIcon={<ActionFavorite />}
-                      uncheckedIcon={<ActionFavoriteBorder/>}
-                      checked={item.eastMale[1].occupiedState==='open'}
-                      disabled={true}
+                      checkedIcon={<Lock />}
+                      uncheckedIcon={<LockOpen/>}
+                      checked={item.eastMale[1].occupiedState==='closed'}
+                      iconStyle={{fill: cyan500}}
                   />
                   <Checkbox style={{width: '20px'}}
-                      checkedIcon={<ActionFavorite />}
-                      uncheckedIcon={<ActionFavoriteBorder/>}
-                      checked={item.eastMale[2].occupiedState==='open'}
-                      disabled={true}
+                      checkedIcon={<Lock />}
+                      uncheckedIcon={<LockOpen/>}
+                      checked={item.eastMale[2].occupiedState==='closed'}
+                      iconStyle={{fill: cyan500}}
                   />
                 </div>
                 </TableRowColumn>
-                <TableRowColumn key={item.floor + '-eastFemale'}>
+                <TableRowColumn style={{'text-align':'center'}} key={item.floor + '-eastFemale'}>
                   <div style={{ display: 'inline-flex'}}>
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.eastFemale[0].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.eastFemale[0].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
                     />
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.eastFemale[1].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.eastFemale[1].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
                     />
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.eastFemale[2].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.eastFemale[2].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
                     />
                   </div>
                 </TableRowColumn>
-                <TableRowColumn key={item.floor + '-westFemale'}>
+                <TableRowColumn style={{'text-align':'center'}} key={item.floor + '-accessible'}>
                   <div style={{ display: 'inline-flex'}}>
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westFemale[0].occupiedState==='open'}
-                        disabled={true}
-                    />
-                    <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westFemale[1].occupiedState==='open'}
-                        disabled={true}
-                    />
-                    <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westFemale[2].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={false}
+                        iconStyle={{fill: grey500}}
                     />
                   </div>
                 </TableRowColumn>
-                <TableRowColumn key={item.floor + '-westMale'}>
+                <TableRowColumn style={{'text-align':'center'}} key={item.floor + '-westFemale'}>
                   <div style={{ display: 'inline-flex'}}>
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westMale[0].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westFemale[0].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
                     />
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westMale[1].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westFemale[1].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
                     />
                     <Checkbox style={{width: '20px'}}
-                        checkedIcon={<ActionFavorite />}
-                        uncheckedIcon={<ActionFavoriteBorder/>}
-                        checked={item.westMale[2].occupiedState==='open'}
-                        disabled={true}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westFemale[2].occupiedState==='closed'}
+                        iconStyle={{fill: pink500}}
+                    />
+                  </div>
+                </TableRowColumn>
+                <TableRowColumn style={{'text-align':'center'}} key={item.floor + '-westMale'}>
+                  <div style={{ display: 'inline-flex'}}>
+                    <Checkbox style={{width: '20px'}}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westMale[0].occupiedState==='closed'}
+                        iconStyle={{fill: cyan500}}
+                    />
+                    <Checkbox style={{width: '20px'}}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westMale[1].occupiedState==='closed'}
+                        iconStyle={{fill: cyan500}}
+                    />
+                    <Checkbox style={{width: '20px'}}
+                        checkedIcon={<Lock />}
+                        uncheckedIcon={<LockOpen/>}
+                        checked={item.westMale[2].occupiedState==='closed'}
+                        iconStyle={{fill: cyan500}}
                     />
                   </div>
                 </TableRowColumn>
